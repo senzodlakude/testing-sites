@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siyathuthuka Hires - Premium Plant Hire in Nkomazi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Modern CSS Reset and Variables */
+        :root {
+            --orange: #FF6B35;
+            --orange-dark: #E55A2B;
+            --white: #FFFFFF;
+            --black: #1A1A1A;
+            --dark-gray: #2D2D2D;
+            --light-gray: #F8F9FA;
+            --text-gray: #6C757D;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--black);
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--orange);
+            color: var(--white);
+            padding: 14px 32px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background: var(--orange-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--orange);
+            color: var(--orange);
+        }
+
+        .btn-outline:hover {
+            background: var(--orange);
+            color: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--orange);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 25px auto 0;
+        }
+
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 10px 0;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--orange);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .logo-icon:before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 18px;
+            background: var(--white);
+            border-radius: 4px 4px 0 0;
+            top: 15px;
+        }
+
+        .logo-icon:after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 10px;
+            background: var(--black);
+            border-radius: 2px;
+            top: 10px;
+            left: 10px;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--black);
+            line-height: 1;
+        }
+
+        .logo-text span {
+            color: var(--orange);
+        }
+
+        .logo-text p {
+            font-size: 12px;
+            color: var(--text-gray);
+            margin-top: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--orange);
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        nav ul li a:hover {
+            color: var(--orange);
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            color: var(--black);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--light-gray);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-img {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .service-content {
+            padding: 30px;
+        }
+
+        .service-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-content h3 i {
+            color: var(--orange);
+        }
+
+        .service-content p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(rgba(255,107,53,0.9), rgba(229,90,43,0.9)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .stat-item h3 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* Equipment Section */
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .equipment-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .equipment-card:hover {
+            transform: scale(1.03);
+        }
+
+        .equipment-img {
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .equipment-content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .equipment-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .equipment-content p {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--light-gray);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            background: var(--orange);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-size: 20px;
+        }
+
+        .contact-text h4 {
+            margin-bottom: 5px;
+        }
+
+        .contact-text p {
+            color: var(--text-gray);
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #e1e1e1;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--orange);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255,107,53,0.2);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            color: var(--white);
+            padding: 80px 0 30px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-about p {
+            margin: 20px 0;
+            color: #aaa;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--orange);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h3, .footer-contact h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .footer-links h3:after, .footer-contact h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background: var(--orange);
+            bottom: -10px;
+            left: 0;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links ul li a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--orange);
+            padding-left: 5px;
+        }
+
+        .footer-contact p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            color: #aaa;
+        }
+
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--orange);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444;
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 48px;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .mobile-nav {
+                position: fixed;
+                top: 0;
+                right: -300px;
+                width: 300px;
+                height: 100vh;
+                background: var(--white);
+                padding: 100px 30px 30px;
+                transition: var(--transition);
+                z-index: 999;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            }
+            
+            .mobile-nav.active {
+                right: 0;
+            }
+            
+            .mobile-nav ul {
+                list-style: none;
+            }
+            
+            .mobile-nav ul li {
+                margin-bottom: 20px;
+            }
+            
+            .mobile-nav ul li a {
+                color: var(--black);
+                text-decoration: none;
+                font-size: 18px;
+                display: block;
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .close-menu {
+                position: absolute;
+                top: 30px;
+                right: 30px;
+                color: var(--black);
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            .hero-btns {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 38px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            section {
+                padding: 80px 0;
+            }
+            
+            .section-header h2 {
+                font-size: 32px;
+            }
+
+            .header-container {
+                padding: 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <div class="logo-text">
+                    <h1>Siyathuthuka <span>Hires</span></h1>
+                    <p>Earthmoving Equipment Specialists</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#equipment">Equipment</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-cta">
+                <a href="tel:+27131234567" class="btn">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+                <div class="mobile-menu" id="mobileMenu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="close-menu" id="closeMenu">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#equipment">Equipment</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Premium Plant Hire Solutions in Nkomazi</h1>
+                <p>Reliable earthmoving equipment for construction, mining, and agricultural projects. Trusted by industry professionals since 2010.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn">Get a Quote</a>
+                    <a href="#equipment" class="btn btn-outline">View Equipment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive plant hire solutions tailored to your project requirements</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1576675466969-38eeae4b41f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-digging"></i> Excavator Hire</h3>
+                        <p>We provide various sizes of excavators for digging, trenching, and demolition projects with experienced operators.</p>
+                        <a href="#contact" class="btn">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-tractor"></i> Bulldozer & Loader Hire</h3>
+                        <p>Our bulldozers and loaders are perfect for earthmoving, grading, and material handling on any terrain.</p>
+                        <a href="#contact" class="btn">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1541976590-713941681591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-truck-moving"></i> Truck & Trailer Hire</h3>
+                        <p>We offer reliable trucks and trailers for transporting equipment and materials to and from your site.</p>
+                        <a href="#contact" class="btn">Enquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" id="about">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>150+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Equipment Units</p>
+                </div>
+                <div class="stat-item">
+                    <h3>12+</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Customer Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment Section -->
+    <section class="equipment" id="equipment">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Equipment</h2>
+                <p>Modern, well-maintained machinery for all your construction needs</p>
+            </div>
+            <div class="equipment-grid">
+                <div class="equipment-card">
+                    <div class="equipment-img" style="background-image: url('https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="equipment-content">
+                        <h3>Excavators</h3>
+                        <p>Various sizes from mini to large excavators</p>
+                    </div>
+                </div>
+                <div class="equipment-card">
+                    <div class="equipment-img" style="background-image: url('https://images.unsplash.com/photo-1576675466969-38eeae4b41f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="equipment-content">
+                        <h3>Bulldozers</h3>
+                        <p>For heavy earthmoving and grading</p>
+                    </div>
+                </div>
+                <div class="equipment-card">
+                    <div class="equipment-img" style="background-image: url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="equipment-content">
+                        <h3>Loaders</h3>
+                        <p>Front-end and backhoe loaders</p>
+                    </div>
+                </div>
+                <div class="equipment-card">
+                    <div class="equipment-img" style="background-image: url('https://images.unsplash.com/photo-1541976590-713941681591?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="equipment-content">
+                        <h3>Trucks & Trailers</h3>
+                        <p>Transport and logistics solutions</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Contact us today for a competitive quote and professional advice on the right equipment for your needs.</p>
+            <a href="#contact" class="btn">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team for all your plant hire needs</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Address</h4>
+                                <p>Nkomazi, Mpumalanga, South Africa</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+27 13 123 4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>info@siyathuthukahires.co.za</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="business-hours">
+                        <h4>Business Hours</h4>
+                        <p>Monday - Friday: 7:00 AM - 5:00 PM</p>
+                        <p>Saturday: 8:00 AM - 1:00 PM</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="inquiryForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="equipment">Equipment Needed</label>
+                            <select id="equipment" class="form-control" required>
+                                <option value="">Select Equipment</option>
+                                <option value="excavator">Excavator</option>
+                                <option value="bulldozer">Bulldozer</option>
+                                <option value="loader">Loader</option>
+                                <option value="truck">Truck & Trailer</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="logo">
+                        <div class="logo-icon"></div>
+                        <div class="logo-text">
+                            <h1>Siyathuthuka <span>Hires</span></h1>
+                            <p>Earthmoving Equipment Specialists</p>
+                        </div>
+                    </div>
+                    <p>Your trusted partner for quality plant hire services in Nkomazi and surrounding areas since 2010.</p>
+                    <p>Owners: Mr. M. Dlamini & S. Myaba</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#equipment">Equipment</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Nkomazi, Mpumalanga</p>
+                    <p><i class="fas fa-phone"></i> +27 13 123 4567</p>
+                    <p><i class="fas fa-envelope"></i> info@siyathuthukahires.co.za</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 7AM-5PM</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Siyathuthuka Hires. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileNav = document.getElementById('mobileNav');
+        const closeMenu = document.getElementById('closeMenu');
+        
+        mobileMenu.addEventListener('click', () => {
+            mobileNav.classList.add('active');
+        });
+        
+        closeMenu.addEventListener('click', () => {
+            mobileNav.classList.remove('active');
+        });
+        
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    mobileNav.classList.remove('active');
+                }
+            });
+        });
+        
+        // Form Submission
+        const inquiryForm = document.getElementById('inquiryForm');
+        inquiryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your inquiry! We will contact you soon.');
+            inquiryForm.reset();
+        });
+    </script>
+</body>
+</html>
