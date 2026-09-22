@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cebekhulu ATM3 — Private Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="headbar">
+      <div class="brand">
+        <div class="brand-badge"><img src="images/logo.png" alt="Cebekhulu ATM3 logo"></div>
+        <div class="brand-name">
+          <span class="m">Cebekhulu ATM3</span>
+          <span class="s">PRIVATE CLINIC</span>
+        </div>
+      </div>
+      <a class="head-call" href="tel:0712545554">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        071 254 5554
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-slides">
+      <div class="hero-slide active">
+        <img src="images/premises.jpg" alt="Cebekhulu ATM3 clinic premises">
+      </div>
+      <div class="hero-slide poster">
+        <img src="images/flyer.jpg" alt="Cebekhulu ATM3 services and contact poster">
+      </div>
+    </div>
+
+    <button class="hero-nav prev" aria-label="Previous slide" onclick="clinicHero.go(-1)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="hero-nav next" aria-label="Next slide" onclick="clinicHero.go(1)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+
+    <div class="hero-content wrap">
+      <div class="hero-eyebrow">Mzinti &amp; Magudu, Mpumalanga</div>
+      <h1>Trusted private care, close to home</h1>
+      <p class="lede">Cebekhulu ATM3 offers same-day consultations, chronic care and dietician services at two accessible locations — with medical aid accepted.</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:0712545554">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call now
+        </a>
+        <a class="btn btn-ghost" href="#services">View services</a>
+      </div>
+
+      <div class="hero-meta">
+        <div>
+          <span class="k">CONSULTATION</span>
+          <span class="v">R550 — includes medication</span>
+        </div>
+        <div>
+          <span class="k">OPEN</span>
+          <span class="v">Mon – Fri, 08:00–17:00 · Sat, 08:00–13:00</span>
+        </div>
+        <div>
+          <span class="k">MEDICAL AID</span>
+          <span class="v">Accepted</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-dots">
+      <button class="active" onclick="clinicHero.goTo(0)" aria-label="Show premises photo"></button>
+      <button onclick="clinicHero.goTo(1)" aria-label="Show services poster"></button>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap strip-inner">
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <span><strong>CCMDD</strong> — chronic medicine dispensed for free</span>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <span>Two locations — Mzinti and Magudu</span>
+      </div>
+      <div class="strip-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Walk-ins welcome</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="services" class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">WHAT WE TREAT</div>
+      <h2>Everyday care and ongoing management, under one roof</h2>
+      <p>From wound dressing and testing to chronic condition support and dietary guidance — our team covers the care most families need close to home.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="care-card">
+        <div class="num">01</div>
+        <h3>Minor ailments &amp; testing</h3>
+        <ul>
+          <li>Wound dressing &amp; prevention</li>
+          <li>STI treatment</li>
+          <li>Antenatal care</li>
+          <li>IV treatment for skin care</li>
+          <li>Pap smear</li>
+          <li>HIV/AIDS testing &amp; counselling</li>
+        </ul>
+      </div>
+      <div class="care-card">
+        <div class="num">02</div>
+        <h3>Chronic condition care</h3>
+        <ul>
+          <li>Hypertension</li>
+          <li>Cholesterol management</li>
+          <li>Diabetes</li>
+          <li>Arthritis</li>
+          <li>CCMDD chronic medicine — free of charge</li>
+        </ul>
+      </div>
+      <div class="care-card">
+        <div class="num">03</div>
+        <h3>Dietician services</h3>
+        <ul>
+          <li>Diabetes &amp; anemia</li>
+          <li>Hypertension</li>
+          <li>Pregnancy, breastfeeding &amp; fertility</li>
+          <li>Constipation &amp; GIT conditions, incl. post-surgery</li>
+          <li>Diverticulitis</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="consult">
+    <div class="wrap consult-inner">
+      <div>
+        <h3>Consultation from <span class="price">R550</span></h3>
+        <p>Includes medication. Medical aid is acceptable — bring your membership details on the day.</p>
+      </div>
+      <a class="btn btn-primary" style="background:var(--navy-950); color:var(--white); box-shadow:none;" href="tel:0712545554">Book a visit</a>
+    </div>
+  </section>
+
+  <section class="locations">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">FIND US</div>
+        <h2>Two clinics, easy to reach</h2>
+        <p>Both branches keep the same hours and pricing, so you can visit whichever is closer.</p>
+      </div>
+      <div class="loc-grid">
+        <div class="loc-card">
+          <span class="tag">Mzinti</span>
+          <h3>Mzinti Branch</h3>
+          <p>Next to the main water reservoir, Emathangeni.</p>
+        </div>
+        <div class="loc-card">
+          <span class="tag">Magudu</span>
+          <h3>Magudu Branch</h3>
+          <p>Next to Shoprite, Kambatsane.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="section-head" style="margin-bottom: 24px;">
+          <div class="eyebrow">GET IN TOUCH</div>
+          <h2>Call to book or ask a question</h2>
+          <p>Our team can help you choose a branch, confirm hours, or answer questions about medical aid before you visit.</p>
+        </div>
+        <div class="phone-list">
+          <a href="tel:0712545554">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            071 254 5554
+          </a>
+          <a href="tel:0822124882">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            082 212 4882
+          </a>
+          <a href="tel:0723554086">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            072 355 4086
+          </a>
+          <a href="tel:0832521704">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            083 252 1704
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <h3>Opening hours</h3>
+        <div class="hours-row"><span class="d">Monday – Friday</span><span class="t">08:00 – 17:00</span></div>
+        <div class="hours-row"><span class="d">Saturday</span><span class="t">08:00 – 13:00</span></div>
+        <div class="hours-row"><span class="d">Sunday</span><span class="t">Closed</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot-inner">
+      <div class="foot-brand">
+        <img src="images/logo.png" alt="Cebekhulu ATM3 logo">
+        <span>Cebekhulu ATM3 Private Clinic</span>
+      </div>
+      <span>Mzinti · Magudu, Mpumalanga</span>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
